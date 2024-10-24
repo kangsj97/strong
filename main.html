@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  <!-- 문자 인코딩을 UTF-8로 설정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- 반응형 웹을 위한 뷰포트 설정 -->
+    <title>Send Data</title>  <!-- 페이지 제목 설정 -->
+    <style>
+        /* 전체 문서의 스타일을 설정 */
+        body {
+            display: flex;  /* Flexbox 사용하여 중앙 정렬 */
+            flex-direction: column;  /* 세로 방향으로 배치 */
+            align-items: center;  /* 수평 중앙 정렬 */
+            justify-content: center;  /* 수직 중앙 정렬 */
+            height: 100vh;  /* 뷰포트 높이 100% 설정 */
+            margin: 0;  /* 기본 마진 제거 */
+            font-family: Arial, sans-serif;  /* 기본 글꼴 설정 */
+        }
+
+        h1 {
+            margin: 20px 0;  /* 제목 상하 여백 설정 */
+        }
+
+        form {
+            display: flex;  /* Flexbox 사용하여 폼 내부 요소 정렬 */
+            flex-direction: column;  /* 세로 방향으로 배치 */
+            align-items: center;  /* 수평 중앙 정렬 */
+        }
+
+        input {
+            margin: 10px 0;  /* 입력 필드 상하 여백 설정 */
+            padding: 10px;  /* 입력 필드 내부 여백 설정 */
+            width: 200px;  /* 입력 필드 너비 설정 */
+            border: 1px solid #ccc;  /* 경계선 스타일 설정 */
+            border-radius: 5px;  /* 둥근 경계선 설정 */
+        }
+
+        button {
+            padding: 40px 40px;  /* 버튼 내부 여백 설정 */
+            background-color: #4CAF50;  /* 버튼 배경 색상 설정 */
+            color: white;  /* 버튼 글자 색상 설정 */
+            border: none;  /* 경계선 제거 */
+            border-radius: 5px;  /* 둥근 경계선 설정 */
+            cursor: pointer;  /* 마우스 포인터 변경 */
+            margin: 10px 0;  /* 버튼 상하 여백 설정 */
+        }
+
+        button:hover {
+            background-color: #45a049;  /* 버튼 hover 시 배경 색상 변경 */
+        }
+
+        /* 추가 버튼을 위한 스타일 */
+        .nav-buttons {
+            display: flex; /* flexbox 사용하여 버튼을 가로로 배치*/
+            justify-content: center; /* justify-content를 사용하여 수평 중앙 정렬*/
+        }
+
+        .nav-button {
+            background-color: rgb(34, 98, 158); /*백그라운드 색상 설정*/
+            margin: 0 15px; /*버튼 여백*/
+        }
+
+        .nav-button:hover {
+            background-color: #0056b3;  /* hover 시 색상 변경 */
+        }
+
+        /* 3x3: 버튼들을 3x3 그리드로 정렬하기 위한 스타일 */
+        .grid-container {
+            display: grid;  /* CSS Grid를 사용하여 버튼 정렬 */
+            grid-template-columns: repeat(3, 1fr);  /* 3개의 열로 구성된 그리드 생성 */
+            gap: 20px;  /* 버튼들 사이의 간격 설정 */
+            justify-items: center;  /* 그리드 내의 버튼들을 중앙 정렬 */
+            margin: 30px 0;  /* 상하 여백 추가 */
+        }
+        .nav-button {
+            padding: 10px 20px;  /* 작은 버튼을 위한 여백 설정 */
+            background-color: rgb(34, 98, 158); /* 백그라운드 색상 설정 */
+            color: white;  /* 버튼 글자 색상 설정 */
+            border: none;  /* 경계선 제거 */
+            border-radius: 5px;  /* 둥근 경계선 설정 */
+            cursor: pointer;  /* 마우스 포인터 변경 */
+            font-size: 14px;  /* 버튼 텍스트 크기 설정 */
+            margin: 10px 5px;  /* 버튼 간의 간격 설정 */
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h1>찾으시는 이용 시설을 선택해 주세요</h1>  <!-- 안내문구1 -->
+
+    <!-- 3x3: 버튼을 3x3 그리드로 정렬 -->
+    <div class="grid-container">
+        <button type="submit">로그인</button>  <!-- 전송 버튼 -->
+        <button type="submit">로그인2</button>  <!-- 전송 버튼 -->
+        <button type="submit">로그인3</button>  <!-- 전송 버튼 -->
+        <button type="submit">로그인4</button>  <!-- 전송 버튼 -->
+        <button type="submit">로그인5</button>  <!-- 전송 버튼 -->
+        <button type="submit">로그인6</button>  <!-- 전송 버튼 -->
+        <button type="submit">로그인7</button>  <!-- 전송 버튼 -->
+        <button type="submit">로그인8</button>  <!-- 전송 버튼 -->
+        <button type="submit">로그인9</button>  <!-- 전송 버튼 -->
+    </div>
+    <!-- 3x3 그리드 종료 -->
+
+    <!-- 추가 버튼들 -->
+    <div class="nav-buttons">
+        <button class="nav-button" onclick="window.location.href='http://127.0.0.1:8002/join'">회원가입</button>  <!-- 회원가입 버튼 -->
+        <button class="nav-button" onclick="window.location.href='http://127.0.0.1:8002/main'">게스트</button>  <!-- 게스트 버튼 -->
+        <button class="nav-button" onclick="window.location.href='http://127.0.0.1:8002/find'">ID/PW 찾기</button>  <!-- ID/PW 찾기 버튼 -->
+    </div>
+</body>
+</html>
